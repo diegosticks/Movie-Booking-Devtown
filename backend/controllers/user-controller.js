@@ -130,7 +130,7 @@ const login = async (req, res, next) => {
 }
 
 const getUserBooking = async (req, res, next) => {
-    const {id} = req.params.id;
+    const id = req.params.id;
     try {
         const bookings = await Bookings.find({ user: id }).populate("user movie");
 

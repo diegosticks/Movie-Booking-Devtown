@@ -11,7 +11,7 @@ const booking = async (req, res, next) => {
     try {
         existingMovie = await Movie.findById(movie);
         existingUser = await User.findById(user);
-        console.log(existingUser);
+        //console.log(existingUser);
 
         if (!existingMovie) {
             return res.status(404).json({ message: "Movie not found by given id" });
